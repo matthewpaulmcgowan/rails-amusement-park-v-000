@@ -1,0 +1,5 @@
+Name: <%= @attraction.name %><br />
+Tickets Needed: <%= @attraction.tickets %><br />
+Minimum Height: <%= @attraction.min_height %><br />
+<%= button_to("Go on this ride", {:controller => "rides", :action => "create", :attraction_id => @attraction.id})%>
+<%= link_to("Edit Attraction",edit_attraction_path(@attraction)) if @user.admin %>

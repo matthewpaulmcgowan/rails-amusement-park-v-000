@@ -1,0 +1,7 @@
+<%= "SIGN IN BY SELECTING YOUR NAME BELOW" %>
+<%=form_tag "/signin" do %>
+  <%=select_tag "user[id]",options_from_collection_for_select(@users, 'id', 'name')%><br />
+  <br />
+  <%=submit_tag "Sign In" %>
+<%end%>
+  
